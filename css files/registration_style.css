@@ -1,0 +1,26 @@
+body {
+    background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+h1{
+    padding-bottom: 20px;
+}
+
+.card-body label{
+    font-size: 20px; 
+}
+
+.card-body input{
+    margin-left: 20%;
+    width: 60%;
+}
+
+.card-body button{
+    background-color: firebrick;
+    color: white; 
+    width: 200px;
+}
