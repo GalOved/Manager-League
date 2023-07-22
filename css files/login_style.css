@@ -1,0 +1,47 @@
+.gradient-custom {
+    background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+h1{
+    padding-bottom: 20px;
+}
+
+#email{
+    font-size: 20px;
+}
+
+#email-input{
+    margin-left: 12.5%;
+    width: 75%;
+}
+
+#password{
+    font-size: 20px;
+}
+
+#password-input{
+    margin-left: 12.5%;
+    width: 75%;
+}
+
+#rem-me{
+    font-size: large;
+}
+
+#forgot-password{
+    font-size: large;
+}
+
+.cord-body{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+#google-logo{
+    margin-right: 5px;
+}
