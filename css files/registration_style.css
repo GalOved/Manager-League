@@ -20,7 +20,14 @@ h1{
 }
 
 .card-body button{
-    background-color: firebrick;
     color: white; 
     width: 200px;
+}
+
+.card-body #btn-clear{
+    background-color: firebrick;
+}
+
+.card-body #btn-sign-up{
+    background-color: green;
 }
