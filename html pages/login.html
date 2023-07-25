@@ -13,7 +13,7 @@
     
 </head>
 <body>
-  <section class="vh-100 gradient-custom">
+  <section class="gradient-custom">
     <div class="container py-5 h-auto w-50">
       <div class="card bg-dark text-white" style="border-radius: 1rem;">
         <div class="card-body p-5 text-center">
@@ -34,35 +34,36 @@
             <div class="d-flex justify-content-around align-items-center mb-4">
               <!-- Checkbox -->
               <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="remember-rd" checked />
+                <input class="form-check-input" type="checkbox" value="" id="remember-me" checked />
                 <label id="rem-me" class="form-check-label" for="remember-rd"> Remember me </label>
               </div>
               <a id="forgot-password" href="#!">Forgot password?</a>
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="btn btn-lg btn-block" style="background-color: firebrick; color: white; width: 200px;">Sign in</button>
+            <button type="submit" class="btn btn-lg btn-block" id="sign_in_btn" style="background-color: firebrick; color: white; width: 200px;">Sign in</button>
             <div class="d-flex justify-content-center">
               <div class="divider d-flex flex-column w-50 ml-5">
                 <h4 class="text-center fw-bold mx-3 mb-0 text-white mt-2 mb-2">OR</h4>
                 <!-- Other option to login -->
                 <div class="login-option">
-                  <a class="btn btn-primary btn-lg btn-block" style="background-color:white; width: 300px;" href="#!"
+                  <a class="btn btn-primary btn-lg btn-block" style="background-color:white; width: 235px;" href="#!"
                   role="button">
-                   <img id="google-logo" src="/imges/google_logo.png" width="20px" height="20px" ></img><label style="color: black;">Continue with Google</label>
-                 </a>
-                  <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998; width: 300px;" href="#!"
-                    role="button">
-                    <i class="bi bi-facebook me-2"></i><label style="color: black;">Continue with Facebook</label>
+                   <img id="google-logo" src="/imges/google_logo.png" width="20px" height="20px" ></img>
+                    <label style="color: black; font-size: medium;">Continue with Google</label>
                   </a>
-                  <a class="btn btn-primary btn-lg btn-block" style="background-color: #0072b1; width: 300px;" href="#!"
-                  role="button">
-                  <i class="bi bi-linkedin me-2"></i><label style="color: black;">Continue with linkedin</label>
-                  </a>
-                  <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee; width: 300px;" href="#!"
+                  <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998; width:235px;" href="#!"
                     role="button">
-                    <i class="bi bi-twitter me-2"></i><label style="color: black;">Continue with twitter</label>
-                </a>
+                    <i class="bi bi-facebook me-2"></i><label style="color: black; font-size: medium;">Continue with Facebook</label>
+                  </a>
+                  <a class="btn btn-primary btn-lg btn-block" style="background-color: #0072b1; width: 235px;" href="#!"
+                    role="button">
+                    <i class="bi bi-linkedin me-2"></i><label style="color: black; font-size: medium;">Continue with linkedin</label>
+                  </a>
+                  <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee; width: 235px;" href="#!"
+                    role="button">
+                    <i class="bi bi-twitter me-2"></i><label style="color: black; font-size: medium;">Continue with twitter</label>
+                  </a>
                 </div>
               </div>
             </div>
@@ -71,7 +72,11 @@
       </div>
     </div>
   </section>
-         <!-- Bootstrap JS Bundle with Popper -->
+  <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!--Login Script-->
+  <script type="module"  src="../javaScript/login_script.js"></script>
+
 </body>
+
 </html>

@@ -4,13 +4,14 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="http://127.0.0.1:5500/html%20pages/">
     <title>Manager-League registration</title>
     <link  rel="stylesheet" type="text/css" href="../css files/registration_style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
     <!-- Bootstrap Font Icon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    
+
 </head>
 <body>
   <section class="gradient-custom vh-auto">
@@ -18,7 +19,7 @@
       <div class="card bg-dark text-white" style="border-radius: 1rem;">
         <div class="card-body p-5 text-center">
           <h1 id="registration-headline"> Manager-League Registration Page</h1>
-          <form>
+          <form >
             <!-- First Name input -->
             <div class="form-outline mb-1">
                 <input type="text" id="first-name-input" class="form-control form-control-lg" />
@@ -51,21 +52,33 @@
   
             <!-- Password input -->
             <div class="form-outline mb-1">
+              <div class="password-pop" id="myPopup-pass">
+                <span class="password-pop-text"><h5>password must inclued:</h5>
+                  <p>At least 8 characters/numbers.
+                    <br>Must include one of the special characters: ~ ` ( ) _ + ! @ # $ % ^ & * , . 
+                    <br>At least one of the characters has an upper/lowercase letter.
+                  </p>
+                </span>
+              </div>
               <input type="password" id="password-input" class="form-control form-control-lg" />
               <label id="password" class="form-label" for="password-input">Password</label>
             </div>
 
             <!-- Password Confirmation input -->
             <div class="form-outline mb-1">
+              <div class="conf-password-pop" id="myPopup-conf">
+                <span class="password-pop-text"><h5>The passwords do not match:</h5>
+                  <p>The password confirmation and password do not match.</p>
+                </span>
+              </div>
               <input type="password" id="password-confirm-input" class="form-control form-control-lg" />
               <label id="password-confirm" class="form-label" for="password-confirm-input">Confirmation Password</label>
             </div>
             
             <div class="page-btn d-flex justify-content-around mt-5">
                 <button id="btn-clear" type="submit" class="btn btn-lg btn-block" >Clear</button>
-                <button id="btn-sign-up" type="submit" class="btn btn-lg btn-block" >Sign Up</button>
+                <button id="btn-sign-up" type="submit" class="btn btn-lg btn-block">Sign Up</button>
             </div>
-
           </form>
         </div>
       </div>
@@ -73,5 +86,8 @@
   </section>
          <!-- Bootstrap JS Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Registration Script-->
+  <script type="module" src = "../javaScript/registration_sctipt.js"></script>
 </body>
+
 </html>

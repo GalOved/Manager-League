@@ -31,3 +31,58 @@ h1{
 .card-body #btn-sign-up{
     background-color: green;
 }
+
+.card-body .password-pop{
+    width: 300px;
+    position:absolute;
+    display: block;
+    background-color: #555;
+    color:rgb(255, 40, 40);
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+    left: 35%;
+    bottom: 36.5%;
+    border-radius: 6px;
+    border: solid 1px;
+    visibility:hidden;
+}
+
+.card-body .password-pop::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent
+}
+
+.card-body .conf-password-pop{
+    width: 300px;
+    position:absolute;
+    display: block;
+    background-color: #555;
+    color: rgb(255, 40, 40);
+    cursor: pointer;
+    text-align: center;
+    z-index: 1;
+    left: 35%;
+    bottom: 26.5%;
+    border-radius: 6px;
+    border: solid 1px;
+    visibility: hidden;
+}
+
+.card-body .conf-password-pop::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent
+}
+
