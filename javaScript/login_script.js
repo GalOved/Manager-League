@@ -39,7 +39,7 @@
       if(rememberMe.checked){
           rememberUser(email.value, password.value);
       }
-      
+
       else{
         signInUser(email.value, password.value);
       }
@@ -91,3 +91,4 @@
       alert(errorCode);
     });
   }
+  
