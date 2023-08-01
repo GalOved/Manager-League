@@ -1,0 +1,200 @@
+body {
+    background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+.columns{
+    border: white 4px solid;
+    
+}
+
+hr{
+    color: black;
+}
+
+.headline{
+    margin-top: 25px;
+}
+
+.headline .row{
+    text-align: center;
+    border-radius: 7px;
+    background-color: #ff9900;
+}
+
+.players-list-ST {
+    background-color: gainsboro; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top: 4px; 
+    padding-bottom: 6px;
+    height: 600px;
+    width:250px;
+    overflow: auto;
+}
+
+.players-list-ST h5{
+    color: black;
+}
+
+.players-list-ST .card{
+    border: black 3px solid;
+    width: 150px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.players-list-ST .card-body{
+    border-top: black 2px solid;
+    color: black;
+}
+
+.players-list-CM {
+    background-color: gainsboro; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top: 4px; 
+    padding-bottom: 6px;
+    height: 600px;
+    width:250px;
+    overflow: auto;
+}
+
+.players-list-CM h5{
+    color: black;
+}
+
+.players-list-CM .card{
+    border: black 3px solid;
+    width: 150px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.players-list-CM .card-body{
+    margin-top: 2px;
+    border-top: black 2px solid;
+    color: black
+}
+
+.players-list-CB{
+    background-color: gainsboro; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top: 4px; 
+    padding-bottom: 6px;
+    height: 600px;
+    width:250px;
+    overflow: auto;
+}
+
+.players-list-CB H5{
+    color: black;
+}
+
+.players-list-CB .card{
+    border: black 3px solid;
+    width: 150px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.players-list-CB .card-body{
+    margin-top: 2px;
+    border-top: black 2px solid;
+    color: black
+}
+
+.players-list-GK{
+    background-color: gainsboro; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top: 4px; 
+    padding-bottom: 6px;
+    height: 600px;
+    width:250px;
+    overflow: auto;
+}
+
+.players-list-GK H5{
+    color: black;
+}
+
+.players-list-GK .card{
+    border: black 3px solid;
+    width: 150px;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.players-list-GK .card-body{
+    margin-top: 2px;
+    border-top: black 2px solid;
+    color: black
+}
+
+.player-selected{
+    background-color: #D3D3D3; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-top: 4px; 
+    padding-bottom: 6px;
+    height: 600px;
+    width:250px;
+    overflow: auto;
+}
+
+.player-selected H5{
+    color: black;
+}
+
+.player-selected .card{
+    border: black 3px solid;
+    width: 180px;
+    height: auto;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.player-selected .card-body{
+    border-top: black 2px solid;
+    color: black
+}
+
+img{
+    height: 150px;
+}
+
+.columns-button{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.columns-button .btn{
+    width: 150px;
+    margin-top: 35px;
+}
+
+.columns-rules{
+    border-right: white 2px solid transparent  ;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #ff9900;
+}
+#num-player-select{
+    position: absolute;
+    left:85%;
+    font-size: large;
+    background-color: #dc3545;
+    width: 15%;
+    height: auto;
+}
+#num-player-select p{
+    margin-top: auto;
+    margin-bottom: auto;
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Players</title>
+    <!--Link Css-->
+    <link  rel="stylesheet" type="text/css" href="../css files/select_player_style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="headline container d-flex justify-content-center">
+        <div class="row">
+            <h2 id="head">Select Players To Your Team</h2>
+        </div>
+    </div>
+    <div class ="container-xxl py-2 h-auto">
+        <div class = "row bg-dark text-white" style="border-radius: 1rem; ">
+            <div class = "columns col-md-8">
+                <div class ="card bg-dark text-white">
+                    <div class = "card-body  text-center">
+                        <h3>Player To Select:</h3>
+                        <div class ="row row-cols-auto">
+                            <div id="STlist" class="players-list-ST col">
+                                <h5>List Of ST</h5>
+                                <hr style="color: black;"> 
+                            </div>
+                            <div id="CMlist"  class="players-list-CM col">
+                                <h5>List Of CM</h5>
+                                <hr style="color: black;"> 
+                            </div>
+                            <div id="CBlist" class="players-list-CB col">
+                                <h5>List Of CB</h5>
+                                <hr style="color: black;"> 
+                            </div>
+                            <div id="GKlist" class="players-list-GK col">
+                                <h5>List Of GK</h5>
+                                <hr style="color: black;"> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "columns col">
+                <div class ="card bg-dark text-white">
+                    <div class = "card-body  text-center">
+                        <h3 >Players Selected:</h3>
+                        <div id = "num-player-select" class = "card">
+                        </div>
+                        <div id="user-player-selected" class="player-selected col">
+                            <h5>Player You Select</h5>
+                            <hr style="color: black;">
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <div class="button-container row bg-dark">
+            <div class = "columns-rules col-sm-8 ">
+                <p><b>Select Your Team Player</b><br>
+                You need to select a total of 14 players as follows:<br>
+                &bull; From the ST list you need to select 4 player.<br>
+                &bull; From the CM list you need to select 4 player.<br>
+                &bull; From the CB list you need to select 4 player.<br>
+                &bull; From the GK list you need to select 2 player.</p>  
+            </div>
+            <div class = "columns-button col-sm-4 ">
+                <button id="submit-team" type="submit" class = "btn btn-danger btn-lg">Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!--Login Script-->
+    <script type="module"  src="../javaScript/select_player_script.js"></script>
+    <script>
+    let array_player = [];
+    let num_of_GK = 0;
+    let num_of_CB = 0;
+    let num_of_CM = 0;
+    let num_of_ST = 0;
+    var playerTeam = [];
+
+    function player_selected(name, position, rating, image) {
+        for(let i = 0; i < array_player.length ; i++ ){
+            if(array_player[i] === name){
+                return;
+            }
+         }
+        
+        if(array_player.length >= 14){
+            alert("You will not be able to select more players. The total number of players should be 14.");
+            return;
+        }
+
+        if(position === "ST"){
+            if(num_of_ST >= 4){
+                alert("You cannot select more players in the ST position");
+                return;
+            }
+            num_of_ST++;
+        }
+        
+        if(position === "CB"){
+            if(num_of_CB >= 4){
+                alert("You cannot select more players in the CB position");
+                return;
+            }
+            num_of_CB++;
+        }
+
+        if(position === "CM"){
+            if(num_of_CM >= 4){
+                alert("You cannot select more players in the CM position");
+                return;
+            }
+            num_of_CM++;
+        }
+
+        if(position === "GK"){
+            if(num_of_GK >= 2){
+                alert("You cannot select more players in the GK position");
+                return;
+            }
+            num_of_GK++;
+        }
+        updateNumPlayersSelected(num_of_ST, num_of_CM, num_of_CB, num_of_GK);
+        
+        pushPlayer = [name, position, rating, image];
+        playerTeam.push(pushPlayer);
+        var select_player = document.getElementById("user-player-selected");
+        array_player.push(name);
+        select_player.innerHTML = select_player.innerHTML +
+        `<div class="card" id="${name}">
+            <img class="card-img-top" src="${image}}" alt="image of ${name}">
+            <div class="card-body">
+                <h6 class="card-title">${name}</h6>
+                <p class="card-text">
+                    Position: ${position}
+                    <br>
+                    rating: ${rating}
+                </p>
+                <button type="button" class="btn btn-danger btn-sm" 
+                            onclick="removeSelectedPlayer(\'${name}\',\'${position}\')">remove player</button>
+            </div>
+        </div>`
+        
+    }
+    
+    function removeSelectedPlayer(name, position){
+        var removePlay = document.getElementById(name);
+        
+        if(position === "ST"){
+            num_of_ST--;
+        }
+        else if(position === "CM"){
+            num_of_CM--;
+        }
+        else if(position === "CB"){
+            num_of_CB--;
+        }
+        else if(position === "GK"){
+            num_of_GK--;
+        }
+
+        for(let i = 0 ; i < array_player.length ; i++){
+            if(array_player[i] === name){
+                array_player.pop(i);
+            }
+        }
+        
+        for(let i = 0 ; i < playerTeam.length ; i++){
+            if(playerTeam[i][0] === name){
+                playerTeam.pop(i);
+            }
+        }
+        removePlay.remove(); 
+        updateNumPlayersSelected(num_of_ST, num_of_CM, num_of_CB, num_of_GK);
+    }
+
+    function updateNumPlayersSelected(countST, countCM, countCB, countGK){
+        let num_players_selected = document.getElementById("num-player-select");
+        num_players_selected.innerHTML = `<p>ST: ${countST}
+                                    <br>CM: ${countCM}
+                                    <br>CB: ${countCB}
+                                    <br>GK: ${countGK}</p>`
+}
+
+    </script>
+</body>
+</html>
