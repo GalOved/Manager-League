@@ -93,7 +93,7 @@ signUp_btn.addEventListener("click", function(e){
       alert("The email address is not valid");
       return;
     }
-    creatUser(email.value, password.value);
+    creatUser(email.value, password.value, team_name.value);
 });
 
 function checkValue(first, last, team, phone, email, password, conf_password){
@@ -127,12 +127,16 @@ function checkLegalEmail(email){
   return true;
 }
 
-function creatUser(email, password){
+function creatUser(email, password, teamName){
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
     // Signed in
       const user = userCredential.user;
-      window.location.href = "login.html";
+      var para = new URLSearchParams();
+      para.append("email", email);
+      para.append("teamName", teamName);
+      window.location.href = "select_player.html?" + para.toString();
+
     // ...
   })
     .catch((error) => {
