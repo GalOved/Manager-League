@@ -1,0 +1,196 @@
+body{
+    background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+.navbar{
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    overflow: hidden;
+    display: block;
+}
+
+.sticky {
+    top: 0;
+    width: 100%;
+}
+  
+.sticky + .field{
+    padding-top: 60px;
+}
+
+.navbar #logo{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+.navbar .project-name{
+    margin-left: 15px;
+    font-size: xx-large;
+}
+
+.navbar .links{
+    font-size: 20px;
+}
+
+.navbar .links a{
+    margin-left: 35px;
+}
+
+.navbar .links .other{
+    margin-right: 50px;
+}
+
+.navbar .links .other span{
+    color: white;
+    font-size: large;
+}
+
+.navbar .links .other button{
+    margin-left: 15px;
+    color : black;
+    width: auto;
+    font-size: large;
+    background-color:darkgray;
+}
+
+h1{
+    font-family: cursive;
+}
+
+.field{
+    background-color: #181818;
+    padding: 30px;
+    margin-top: 10px;
+    border-radius: 2%;
+    margin-bottom: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.grass{
+    margin-top: auto;
+    background-color: green;
+    border: white 2px solid;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: auto;
+    border-radius: 3%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.row{
+    position: relative;
+}
+
+.container {
+    padding-top: 2%;
+}
+
+.flipcard {
+    perspective: 1000px;
+    margin-bottom: 1.5rem;
+}
+
+.flipcard .flipcard-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flipcard .card-front, 
+.flipcard .card-back {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    backface-visibility: hidden;
+    transition: all .3s;
+}
+
+.flipcard .card-front {
+    z-index: 2;
+}
+
+.flipcard .card-front::after {
+    content: "";
+    display: block;
+    width: 0;
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    border-width: 16px 16px 0 0;
+    border-style: solid;
+    border-color: #999 #fff;
+    border-radius: .25rem 0 0 0;
+}
+
+.flipcard .card-back {
+    position: absolute;
+    top: 0;
+    text-align: left;
+    z-index: 1;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+
+/* the flippy magic */ 
+.flipcard:hover .flipcard-wrap {
+    transform: rotateY(-180deg);
+}
+
+.card{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.card .card-img-top{
+    width: auto;
+    height: 170px;
+    object-fit: fill;
+}
+
+.card-body{
+    text-align: center;
+    color: black;
+    font-size: small;
+    font-family: cursive;
+}
+
+.card-body h5{
+    text-decoration: underline;
+    font-size: medium;
+}
+
+#st1{
+    margin-right: 5%;
+}
+
+#cm1{
+    margin-right: 5%;
+}
+
+#cm2{
+    margin-right: 5%;
+}
+
+#cm3{
+    margin-right: 5%;
+}
+
+#cb1{
+    margin-right: 5%;
+}
+
+#cb2{
+    margin-right: 5%;
+}
+
+#cb3{
+    margin-right: 5%;
+}
