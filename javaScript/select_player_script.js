@@ -131,8 +131,7 @@ head.innerHTML =   "Team Name: " + team_name + " " + `<br>` + head.innerHTML;
 var subButton = document.getElementById("submit-team");
 subButton.addEventListener("click", (e)=>{
     e.preventDefault();
-    console.log(playerTeam);
-    if(playerTeam.length < 14){
+    if(playerTeam.length < 11){
         alert("You do not have enough players in the team, more players must be added to the list of players");
         return;
     }
@@ -142,22 +141,46 @@ subButton.addEventListener("click", (e)=>{
             Name : playerTeam[i][0],
             Position : playerTeam[i][1],
             Rating : playerTeam[i][2],
-            Image : playerTeam[i][3]
+            Image : playerTeam[i][3],
+            Onfield: true,
         };
         playersSelectByUser[i] = playerDetaile;
     }
-    console.log(playersSelectByUser);
+
+    let ATK = 0, MID = 0, DEF = 0 ;
+    for(let player in playersSelectByUser){
+        if(playersSelectByUser[player]["Position"] == "ST"){
+            ATK += Number(playersSelectByUser[player]["Rating"]);
+        }
+        if(playersSelectByUser[player]["Position"] == "CM"){
+            MID += Number(playersSelectByUser[player]["Rating"]);
+        }
+        if(playersSelectByUser[player]["Position"] == "CB" || playersSelectByUser[player]["Position"] == "GK"){
+            DEF += Number(playersSelectByUser[player]["Rating"]);
+        }
+    }
+    ATK = ATK/2;
+    MID = MID/4;
+    DEF = DEF/5;
+
+    const average = {
+        ATK : ATK,
+        MID : MID,
+        DEF : DEF
+    }
+
     const unqKey = push(dbRef2).key;
     const data = {
         Email : email,
         TeamName : team_name,
-        Players : playersSelectByUser
+        Players : playersSelectByUser,
+        TeamAverage : average,
     };
+
     const updateData = {};
     updateData[unqKey] = data;
     update(dbRef2, updateData);
     updateData[unqKey] = data;
-    
     window.location.href = "login.html";
 })
 let num_players_selected = document.getElementById("num-player-select");

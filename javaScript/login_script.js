@@ -51,8 +51,10 @@
       .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      alert("sign in successfully.")
-      //TODO:location the user to the home page with the command "window.location.href:'homePageLocation'"
+      alert("sign in successfully.");
+      var para = new URLSearchParams();
+      para.append("email", email);
+      window.location.href = "team_page.html?" + para.toString();
       // ...
       })
     .catch((error) => {
@@ -81,7 +83,10 @@
     })
     .then((userCredential) => {
         // User signed in successfully
-        //TODO:location the user to the home page with the command "window.location.href:'homePageLocation'"
+        var para = new URLSearchParams();
+        para.append("email", email);
+        window.location.href = "team_page.html?" + para.toString();
+        // ...
     })
 
     .catch((error) => {

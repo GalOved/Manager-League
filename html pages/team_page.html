@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!--CSS Link-->
+    <link rel="stylesheet" type="text/css" href="../css files/team_page.css">
+
+    <title>My Team Page</title>
+  
+</head>
+<body>
+    <nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjPFdtGE9zY1clduQzb8xXKsntUtUtBiRamA&usqp=CAU">  
+            <a class="project-name navbar-brand" href="#">Manager League</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="links collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">My Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Game Simulate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">League Table</a>
+                    </li>
+                </ul>
+                <ul class="other navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-btn">
+                        <span type="menu" class="btn">
+                            <i id="userEmail" class="bi bi-person-circle" > UserEmail</i>
+                        </span>
+                    </li>
+                    <li class="nav-btn">
+                        <button id="logout" type="button" class="btn">
+                            <i class="bi bi-box-arrow-right"> Logout</i>
+                        </button>
+                    </li>   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class = "container-fluid mt-4 text-white w-100 text-center">
+        <h1>My Team Squad Players:</h1>
+        <div class = "row">
+            <div class = "field col">
+                <div class="container w-100 grass">
+                    <div id="ST-players" class="row justify-content-md-center">
+                        <div id="st1" class="col col-md-2">
+                        </div>
+                        <div id="st2" class="col col-md-2">
+                        </div>
+                    </div>
+                    <div id="CM-players" class="row justify-content-md-center">
+                        <div id="cm1" class="col-md-2">
+                        </div>
+                        <div id="cm2" class="col-md-2">
+                        </div>
+                        <div id="cm3" class="col-md-2">
+                        </div>
+                        <div id="cm4" class="col-md-2">
+                        </div>
+                    </div>
+                    <div id="CB-players" class="row justify-content-md-center">
+                        <div id="cb1" class="col-md-2">
+                        </div>
+                        <div id="cb2" class="col-md-2">
+                        </div>
+                        <div id="cb3" class="col-md-2">
+                        </div>
+                        <div id="cb4" class="col-md-2">
+                        </div>
+                    </div>
+                    <div id="GK-players" class="row justify-content-md-center">
+                        <div id="gk" class="col-md-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Script-->
+    <script type="module"  src="../javaScript/team_page.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        
+        let playerOnfield = [];
+        function selectedPlayer(playerName, type){
+            var position = document.getElementById(type);
+            playerOnfield.push(playerName);
+            position.innerHTML = 
+                `<p> ${playerName} </p>`;
+            position.style.background = "red";
+        }
+    </script>
+</body>
+</html>

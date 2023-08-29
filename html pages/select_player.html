@@ -59,11 +59,11 @@
         <div class="button-container row bg-dark">
             <div class = "columns-rules col-sm-8 ">
                 <p><b>Select Your Team Player</b><br>
-                You need to select a total of 14 players as follows:<br>
-                &bull; From the ST list you need to select 4 player.<br>
+                You need to select a total of 11 players as follows:<br>
+                &bull; From the ST list you need to select 2 player.<br>
                 &bull; From the CM list you need to select 4 player.<br>
                 &bull; From the CB list you need to select 4 player.<br>
-                &bull; From the GK list you need to select 2 player.</p>  
+                &bull; From the GK list you need to select 1 player.</p>  
             </div>
             <div class = "columns-button col-sm-4 ">
                 <button id="submit-team" type="submit" class = "btn btn-danger btn-lg">Submit</button>
@@ -92,13 +92,13 @@
             }
          }
         
-        if(array_player.length >= 14){
-            alert("You will not be able to select more players. The total number of players should be 14.");
+        if(array_player.length >= 11){
+            alert("You will not be able to select more players. The total number of players should be 11.");
             return;
         }
 
         if(position === "ST"){
-            if(num_of_ST >= 4){
+            if(num_of_ST >= 2){
                 alert("You cannot select more players in the ST position");
                 return;
             }
@@ -122,7 +122,7 @@
         }
 
         if(position === "GK"){
-            if(num_of_GK >= 2){
+            if(num_of_GK >= 1){
                 alert("You cannot select more players in the GK position");
                 return;
             }
