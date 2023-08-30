@@ -53,7 +53,12 @@ var cb4 = document.getElementById("cb4");
 
 var gk = document.getElementById("gk");
 
+var para1 = new URLSearchParams();
+para1.append("email", email);
+
 let userKey;
+let game_sim_link = document.getElementById("game_sim_link");
+game_sim_link.innerHTML = `<a class="nav-link" href="game_simulate.html?${para1.toString()}">Game Simulate</a>`
 
 
 onValue(dbRef, (snapshot)=>{
