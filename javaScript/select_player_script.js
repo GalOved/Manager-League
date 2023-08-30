@@ -175,6 +175,7 @@ subButton.addEventListener("click", (e)=>{
         TeamName : team_name,
         Players : playersSelectByUser,
         TeamAverage : average,
+        MyLeague: " ",
     };
 
     const updateData = {};
