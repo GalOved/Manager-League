@@ -1,0 +1,108 @@
+body{
+    background: #6a11cb;
+    
+    background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+    
+}
+
+.navbar{
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+    overflow: hidden;
+    display: block;
+}
+
+.sticky {
+    top: 0;
+    width: 100%;
+}
+
+.sticky + .field{
+    padding-top: 60px;
+}
+
+.navbar #logo{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.navbar .project-name{
+    margin-left: 15px;
+    font-size: xx-large;
+}
+
+.navbar .links{
+    font-size: 20px;
+}
+
+.navbar .links a{
+    margin-left: 35px;
+}
+
+.navbar .links .other{
+    margin-right: 50px;
+}
+
+.navbar .links .other span{
+    color: white;
+    font-size: large;
+}
+
+.navbar .links .other button{
+    margin-left: 15px;
+    color : black;
+    width: auto;
+    font-size: large;
+    background-color:darkgray;
+}
+
+.table-cont{
+    margin-top: 5%;
+    border: white 2px solid;
+    box-shadow: rgba(0, 0, 0, 1) 10px 22px 70px 4px;
+}
+
+.table-cont h1{
+    font-size:4rem;
+    color:seagreen;
+    font-family: cursive;
+    text-decoration: underline;
+}
+
+.table-cont .table{
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.table-cont .table th{
+    font-size: xx-large;
+    text-decoration: underline;
+    border:crimson 3px solid ;  
+}
+
+.table-head{
+    border-bottom:crimson 6px solid;
+    font-family: cursive;
+    color:crimson;
+}
+
+.table-cont .table tr{
+    text-align: center;
+    font-size: large;
+    border-top:white 3px solid ;
+    
+}
+
+.table-cont .table td{
+    border:white 3px solid ;
+    font-size:1.5rem;
+}
+

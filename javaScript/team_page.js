@@ -60,6 +60,9 @@ let userKey;
 let game_sim_link = document.getElementById("game_sim_link");
 game_sim_link.innerHTML = `<a class="nav-link" href="game_simulate.html?${para1.toString()}">Game Simulate</a>`
 
+let table_link = document.getElementById("table_page_link");
+table_link.innerHTML = `<a class="nav-link" href="table_page.html?${para.toString()}">League Table</a>`
+
 
 onValue(dbRef, (snapshot)=>{
         for(let key in snapshot.val()){
