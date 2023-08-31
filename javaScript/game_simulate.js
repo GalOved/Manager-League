@@ -47,6 +47,9 @@ var email = para.get("email");
 let team_page_link = document.getElementById("team_page_link");
 team_page_link.innerHTML = `<a class="nav-link" href="team_page.html?${para.toString()}">My Team</a>`
 
+let table_link = document.getElementById("table_page_link");
+table_link.innerHTML = `<a class="nav-link" href="table_page.html?${para.toString()}">League Table</a>`
+
 document.getElementById('userEmail').innerHTML = " " + email;
 
 let logout = document.getElementById("logout");
